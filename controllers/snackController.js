@@ -6,11 +6,12 @@ const {
   createSnack,
   deleteSnack,
   updateSnack,
-} = require("../queries/snacks");
+} = require("../queries/snack");
 
 // INDEX
 snacks.get("/", async (req, res) => {
     const allSnacks = await getAllSnacks();
+    console.log(allSnacks)
     if (allSnacks[0]) {
       res.status(200).json(allSnacks);
     } else {
@@ -30,7 +31,7 @@ snacks.get("/:id", async (req, res) => {
 });
 
 // CREATE
-snacks.post("/", checkBoolean, checkName, async (req, res) => {
+snacks.post("/", async (req, res) => {
   try {
     const snack = await createSnack(req.body);
     res.json(snack);

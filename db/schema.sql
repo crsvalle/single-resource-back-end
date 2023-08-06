@@ -6,7 +6,7 @@ CREATE DATABASE snacks_dev;
 CREATE TABLE snacks (
  id SERIAL PRIMARY KEY,
  name TEXT NOT NULL,
- image TEXT DEFAULT "",
+ image TEXT DEFAULT '',
  serving INT NOT NULL,
  protein INT NOT NULL,
  sugar INT NOT NULL,
