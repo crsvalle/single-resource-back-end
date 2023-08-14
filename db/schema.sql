@@ -7,11 +7,11 @@ CREATE TABLE snacks (
  id SERIAL PRIMARY KEY,
  name TEXT NOT NULL,
  image TEXT DEFAULT '',
- serving INT NOT NULL,
- protein INT NOT NULL,
- sugar INT NOT NULL,
- sodium INT NOT NULL,
- fat INT NOT NULL,
+ serving INT DEFAULT 0,
+ protein INT DEFAULT 0,
+ sugar INT DEFAULT 0,
+ sodium INT DEFAULT 0,
+ fat INT DEFAULT 0,
  type TEXT,
  is_favorite BOOLEAN
 );
