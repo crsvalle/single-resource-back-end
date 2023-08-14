@@ -27,6 +27,12 @@ snacks.get("/:id", async (req, res) => {
 
 // CREATE
 snacks.post("/", async (req, res) => {
+
+  if (!req.body.image) {
+    req.body.image =
+      "https://upload.wikimedia.org/wikipedia/commons/1/14/No_Image_Available.jpg";
+  }
+
   try {
     const snack = await createSnack(req.body);
     res.json(snack);
