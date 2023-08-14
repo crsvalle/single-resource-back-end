@@ -8,7 +8,7 @@ CREATE TABLE snacks (
  name TEXT NOT NULL,
  image TEXT DEFAULT '',
  serving INT DEFAULT 0,
- protein INT DEFAULT 0,
+ protein FLOAT DEFAULT 0,
  sugar INT DEFAULT 0,
  sodium INT DEFAULT 0,
  fat INT DEFAULT 0,
